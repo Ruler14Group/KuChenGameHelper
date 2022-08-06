@@ -1,0 +1,7 @@
+com\doreoom\kcHelper\commands\CommandView.class
+com\doreoom\kcHelper\Main.class
+com\doreoom\kcHelper\commands\CommandBanTalk.class
+com\doreoom\kcHelper\listener\PlayerListener.class
+com\doreoom\kcHelper\commands\CommandAutoBan.class
+com\doreoom\kcHelper\commands\CommandNotice.class
+com\doreoom\kcHelper\commands\CommandMaintenance.class
