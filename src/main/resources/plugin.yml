@@ -1,19 +1,6 @@
-name: KCHelper
-main: com.doreoom.kcHelper.Main
-version: 1.3
-commands:
-  v:
-    description: 一键隐身！
-    usage: /v 1
-  mt:
-    description: 维护功能开关！
-    usage: /mt 1
-  nt:
-    description: 管理提示开关！
-    usage: /nt 1
-  ab:
-    description: 死亡自动ban！
-    usage: /ab 1
-  bt:
-    description: ban talk!
-    usage: /bt 1
+name: GameHelper
+version: '${project.version}'
+main: com.ruler14.gamehelper.GameHelper
+api-version: 1.16
+authors: [ Ruler14Group ]
+description: A Server Helper
