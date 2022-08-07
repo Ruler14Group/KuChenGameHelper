@@ -11,6 +11,7 @@ import org.bukkit.entity.Player;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.Collection;
+import java.util.List;
 
 public class CommandGameHelper implements CommandExecutor {
 
@@ -32,16 +33,15 @@ public class CommandGameHelper implements CommandExecutor {
             }
 
             switch (args[0]){
-                case "autoBan":
+                case "autoban":
                     break;
                 case "notice":
                     break;
-                case "talkBan":
+                case "talkban":
                     break;
                 case "maintenance":
                     Collection<? extends Player> onlinePlayers = plugin.getServer().getOnlinePlayers();
 
-                    conf.set("enable", arg2);
                     if (arg2.equals("1")){
                         for (Player p : onlinePlayers) {
                             if (!p.isOp()){
@@ -51,10 +51,24 @@ public class CommandGameHelper implements CommandExecutor {
                     }
                     break;
                 case "invisible":
+                    List<Player> players= plugin.getServer().getWorld("world").getPlayers();
+
+                    if (args[0].equals("0")){
+                        for (Player p : players){
+                            p.showPlayer(plugin,player);
+                        }
+                        player.sendRawMessage("隐身已关闭");
+                }else{
+                        for (Player p : players){
+                            p.hidePlayer(plugin,player);
+                        }
+                        player.sendRawMessage("隐身已关闭");
+                    }
                     break;
             }
 
             if (!args[0].equals("invisible")){
+                conf.set("enable", arg2);
                 plugin.saveConfig();
                 plugin.getConfig().set(args[0], conf);
             }
