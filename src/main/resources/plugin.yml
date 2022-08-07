@@ -4,3 +4,7 @@ main: com.ruler14.gamehelper.GameHelper
 api-version: 1.16
 authors: [ Ruler14Group ]
 description: A Server Helper
+commands:
+  gh:
+    description: GameHelper
+    usage: /gh autoBan/notice/talkBan/maintenance
