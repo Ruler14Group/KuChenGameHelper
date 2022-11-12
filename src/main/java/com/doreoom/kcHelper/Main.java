@@ -2,9 +2,26 @@ package com.doreoom.kcHelper;
 
 import com.doreoom.kcHelper.commands.*;
 import com.doreoom.kcHelper.listener.PlayerListener;
+import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class Main extends JavaPlugin {
+
+    private static Main instance;
+    public ConfigurationSection AUTO_BAN = getConfig().getConfigurationSection("autoban");
+    public ConfigurationSection NOTICE = getConfig().getConfigurationSection("noticee");
+    public ConfigurationSection MUTE = getConfig().getConfigurationSection("bantalk");
+    public ConfigurationSection MAINTENANCE = getConfig().getConfigurationSection("maintenance");
+    public ConfigurationSection DEAD_SHOW = getConfig().getConfigurationSection("deadshow");
+
+    public Main(){
+        instance = this;
+    }
+
+    public static Main getInstance() {
+        return instance;
+    }
+
     @Override
     public void onDisable() {
         super.onDisable();

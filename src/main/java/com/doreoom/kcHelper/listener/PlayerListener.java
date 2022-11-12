@@ -31,7 +31,7 @@ public class PlayerListener implements Listener {
         this.plugin = plugin;
     }
 
-    @EventHandler
+    //@EventHandler
     public void onPlayerChat(AsyncChatEvent event) {
         Player player = event.getPlayer();
         ConfigurationSection notice = plugin.getConfig().getConfigurationSection("notice");
