@@ -37,6 +37,7 @@ public class Main extends JavaPlugin {
         getCommand("nt").setExecutor(new CommandNotice(this));
         getCommand("ab").setExecutor(new CommandAutoBan(this));
         getCommand("bt").setExecutor(new CommandBanTalk(this));
+        getCommand("ks").setExecutor(new CommandDeadShow());
         getServer().getPluginManager().registerEvents(new PlayerListener(this), this);
     }
 }

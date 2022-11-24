@@ -8,3 +8,7 @@ notice:
   enable: '1'
 bantalk:
   enable: '1'
+deadshow:
+  enable: '1'
+deathmessage:
+  enable:'1'

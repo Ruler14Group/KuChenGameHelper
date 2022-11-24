@@ -1,6 +1,6 @@
 name: KCHelper
 main: com.doreoom.kcHelper.Main
-version: 1.3
+version: 1.4
 commands:
   v:
     description: 一键隐身！
@@ -17,3 +17,6 @@ commands:
   bt:
     description: ban talk!
     usage: /bt 1
+  ks:
+    description: 玩家死亡显示开关
+    usage: /ks 1plugin.getConfig().getConfigurationSection("deadshow");
